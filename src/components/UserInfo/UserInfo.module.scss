@@ -1,0 +1,50 @@
+.userInfo {
+  padding: 16px 24px;
+}
+
+.name {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.description {
+  margin: 0 0 16px;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.label {
+  color: #888;
+  min-width: 100px;
+}
+
+.value {
+  color: #333;
+}
+
+.link {
+  color: #1a73e8;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

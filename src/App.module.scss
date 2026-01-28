@@ -1,0 +1,33 @@
+.wrapperApp {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  padding-bottom: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.app {
+  display: grid;
+  grid-template-areas:
+    "sidebar main";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  min-height: 100vh;
+}
+
+.main {
+  grid-area: main;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
