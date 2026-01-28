@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { addPost } from '../../redux';
 import styles from './MyPosts.module.scss';
 
 function MyPosts() {
@@ -6,7 +7,7 @@ function MyPosts() {
 
   const handleSubmit = () => {
     if (postText.trim()) {
-      console.log('New post:', postText);
+      addPost(postText);
       setPostText('');
     }
   };

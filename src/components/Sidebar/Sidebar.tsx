@@ -1,15 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import { state } from '../../redux';
 import styles from './Sidebar.module.scss';
 
-const menuItems = [
-  { id: 'profile', label: 'Profile', path: '/profile' },
-  { id: 'dialogs', label: 'Dialogs', path: '/dialogs' },
-  { id: 'news', label: 'News', path: '/news' },
-  { id: 'music', label: 'Music', path: '/music' },
-  { id: 'settings', label: 'Settings', path: '/settings' },
-];
-
 function Sidebar() {
+  const { menuItems } = state.sidebar;
+
   return (
     <aside className={styles.sidebar}>
       <nav className={styles.nav}>

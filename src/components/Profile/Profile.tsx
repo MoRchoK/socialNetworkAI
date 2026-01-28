@@ -2,14 +2,17 @@ import Avatar from '../Avatar';
 import UserInfo from '../UserInfo';
 import MyPosts from '../MyPosts';
 import Post from '../Post';
+import { state } from '../../redux';
 import styles from './Profile.module.scss';
 
 function Profile() {
+  const { user, posts } = state.profilePage;
+
   return (
     <div className={styles.profile}>
       <div className={styles.cover}>
         <img
-          src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=1200&h=300&fit=crop"
+          src={user.coverImage}
           alt="Cover"
           className={styles.coverImage}
         />
@@ -19,24 +22,19 @@ function Profile() {
           <Avatar />
         </div>
         <UserInfo
-          name="John Doe"
-          description="Frontend Developer | React Enthusiast"
-          dateOfBirth="January 15, 1995"
-          city="New York, USA"
-          education="MIT, Computer Science"
-          webSite="https://johndoe.dev"
+          name={user.name}
+          description={user.description}
+          dateOfBirth={user.dateOfBirth}
+          city={user.city}
+          education={user.education}
+          webSite={user.webSite}
         />
       </div>
       <MyPosts />
       <div className={styles.posts}>
-        <Post
-          message="Just finished building a new React component! Loving the power of hooks."
-          date="2 hours ago"
-        />
-        <Post
-          message="Working on a social network project. Excited to see it come together!"
-          date="Yesterday"
-        />
+        {posts.map((post) => (
+          <Post key={post.id} message={post.message} date={post.date} />
+        ))}
       </div>
     </div>
   );
