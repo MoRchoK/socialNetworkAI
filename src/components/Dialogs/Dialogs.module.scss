@@ -1,0 +1,59 @@
+.dialogs {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.dialogsList {
+  width: 200px;
+  border-right: 1px solid #e0e0e0;
+  padding: 16px;
+}
+
+.dialogItem {
+  display: block;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #f0f2f5;
+  }
+}
+
+.activeDialog {
+  background-color: #e7f3ff;
+  color: #1877f2;
+
+  &:hover {
+    background-color: #e7f3ff;
+  }
+}
+
+.messages {
+  flex: 1;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  padding: 10px 16px;
+  background-color: #f0f2f5;
+  border-radius: 18px;
+  max-width: 70%;
+  color: #1a1a1a;
+}
+
+.placeholder {
+  color: #65676b;
+  text-align: center;
+  margin-top: 50px;
+}
